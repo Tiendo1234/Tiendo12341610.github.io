@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/jpeg;base64,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">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Đăng Tiến Hotel</title>
+</head>
+<body>
+    <header>
+     <div class="header__introduce">
+      <img class="header__img" src="https://baithojunks.com/images/slide/8791slide33.jpg" alt="Downtown Hạ Long">
+        <div class="header__intro">
+            <p class="header__intro-text" >DỊCH VỤ KHÁCH SẠN TRỰC TUYẾN HÀNG ĐẦU VIỆT NAM</p>
+            <a class="header__intro-link" href="#">ĐẶT PHÒNG</a>
+        </div>
+        <div class="header__intro-main">
+            <div class="header__intro-main-text">
+                <a href="#" class="header__intro-main-inf" title="Hạ Long">Hạ Long</a>
+            </div>
+         <div class="header__intro-main-link-first">
+            <ul id="header">
+            <li class="header__intro-main--list">
+                <a href="" class="header__intro-main-link header__intro-main-link--blue">Trang chủ</a>
+            </li>
+        <li class="header__intro-main--list">
+         <div class="header__intro-main--cover">
+                <a href="" class="header__intro-main-link header__intro-main-link--list">
+                    Loại phòng
+                <i class=" nav-arrow-down ti-angle-down header__intro-main-icon"></i>
+                </a>
+            <div class="header__intro-main-option--list">
+                <ul class="header__intro-main--option">
+                    <li>
+                        <a href="" class="header__intro-main-link-second">SANG TRỌNG</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__intro-main-link-second">CẶP ĐÔI</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__intro-main-link-second">GIA ĐÌNH</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__intro-main-link-second">GIÁ RẺ</a>
+                    </li>
+                </ul>
+            </div>
+         </div>
+        </li>
+         
+            <li class="header__intro-main--list">
+                <a href="" class="header__intro-main-link">Dịch vụ</a>
+            </li>   
+            <li class="header__intro-main--list">
+                <a href="" class="header__intro-main-link">Tin tức</a>
+            </li> 
+            <li class="header__intro-main--list">
+                <a href="" class="header__intro-main-link">Giới thiệu</a>
+            </li>  
+            <li class="header__intro-main--list">
+                <a href="" class="header__intro-main-link">Liên hệ</a>
+            </li>     
+            </ul>
+         </div>
+        </div>
+        <div class="header__intro-body no-wrap ">
+            <div class="header__intro-body-hotline col">
+                <div class="header__intro--hotline ">
+                    <span>Hotline: 1900 666 888</span>
+                </div>
+            </div>
+            <div class="header__intro-name-hotel col">
+                <div class="header__intro-name-p">
+                    <p>Đăng Tiến Hotel</p>
+                </div>
+                <div class="header__intro-name-h4">
+                    <h4>CHUẨN MỰC KHÁCH SẠN ĐỈNH CAO</h4>
+                </div>
+                <div class="header__intro-name-h5">
+                    <h5>Tham gia chương trình Dawng Tien Awards và bắt đầu ngay hôm nay</h5>
+                </div>
+            </div>
+            <div class="header__intro--check col">
+                <div class="header__intro-table--check">
+                    <p>Check-in*</p>
+                    <input type="date" placeholder="Check-in Date" required-name="" class="header__intro-check--in" id="header__check">
+                    <p>Check-out*</p>
+                    <input type="date"  required-name="" class="header__intro-check--out" id="header__check">
+                    <p>Adults</p>
+                    <input type="number" class="header__intro-adults" id="header__check" min="3" max="100" value="">
+                    <p>Childrent</p>
+                    <input type="number" class="header__intro-Childrent" id="header__check" min="0" max="10">
+                    <a href="" class="header__intro-table--search">SEARCH</a>
+                </div>
+            </div>
+        </div>
+     </div>
+    </header>
+    <content>
+        <div class="content_grid grid">
+            <div class="content-evaluate ">
+                <p class="content-evaluate--comment">"Tôi thực sự yêu thích khách sạn này, nếu chủ của khách sạn này bán tôi chắc chắn sẽ mua nó cho riêng mình"</p>
+                <p class="content-evaluate--reviewer">KHOA PUG - KHÁCH HÀNG THÂN THIẾT</p>
+            </div>
+            <div class="content__img">
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                            <a href=""><img class="img-to-fit" src="https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/273906460.jpg?k=a518577087c403f192582d1ae6299b93dcc7c7d962370c9677cf7a02ed8c473a&o=&hp=1" alt=""></a>
+                        </div>
+                        <div class="content_img-text">
+                            <div class="content_img-text--mid">
+                                <h2>Hồ bơi</h2>
+                                <p>Chất lượng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                            <a href=""><img class="img-to-fit" src="https://img.tripi.vn/cdn-cgi/image/width=1280,height=1280/https://www.googleapis.com/download/storage/v1/b/hotelcdn/o/40454%2F3A1O4S311J_ICPQ_Resort%20Exterior(2).jpg?generation=1593766513879962&alt=media" alt=""></a>
+                        </div>
+                        <div class="content_img-text">
+                            <div class="content_img-text--mid">
+                                <h2>Resort</h2>
+                                <p>Sang trọng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                        <a href=""><img class="img-to-fit" src="http://mauweb.monamedia.net/encore/wp-content/uploads/2019/03/84.jpg" alt=""></a>
+                        </div>
+                        <div class="content_img-text">
+                            <div class="content_img-text--mid">
+                                <h2>Beefsteak</h2>
+                                <p>Hảo hạng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                            <a href=""><img class="img-to-fit" src="https://img.tripi.vn/cdn-cgi/image/width=1280,height=1280/https://storage.googleapis.com/hms_prod/photo/img/455431kmBITA/150592923.jpg" alt=""></a>
+                        </div>
+                            <div class="content_img-text">
+                                <div class="content_img-text--mid">
+                                    <h2>Ngắm biển</h2>
+                                    <p>Chill</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                            <a href=""><img class="img-to-fit" src="https://img.tripi.vn/cdn-cgi/image/width=1280,height=1280/https://www.googleapis.com/download/storage/v1/b/hotelcdn/o/40454%2FVAQQJVR606_day1.intercon.3822.jpg?generation=1593767205765148&alt=media" alt=""></a>
+                        </div>
+                            <div class="content_img-text">
+                                <div class="content_img-text--mid">
+                                    <h2>Sang trọng</h2>
+                                    <p>Quý tộc</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="content_img--overlay">
+                        <div class="img--dark">
+                            <a href=""><img class="img-to-fit" src="https://img.tripi.vn/cdn-cgi/image/width=1280,height=1280/https://www.googleapis.com/download/storage/v1/b/hotelcdn/o/40454%2F3WWRMNTVDP_ICPQ_Vista%20Pool(3).jpg?generation=1593767116672844&alt=media" alt=""></a>
+                        </div>
+                                <div class="content_img-text">
+                                    <div class="content_img-text--mid">
+                                        <h2>Relax</h2>
+                                        <p>Comfortable</p>
+                                    </div>
+                                </div>
+                    </div>
+            </div>  
+        </div>
+        <div class="video_introduce">
+            <div class="video_bg">
+                <video muted autoplay loop class="img-full-width">
+                    <source src="https://i.rmbl.ws/s8/2/X/J/g/t/XJgta.haa.1.mp4?b=0&u=3" type="video/mp4">
+                </video>
+                <div class="video-item">
+                    <div class="video-item-text--h1">
+                        <h1>Stay with us</h1>
+                    </div>
+                    <div class="video-item-text--h2">
+                        <h2>ĐẶT PHÒNG NGAY HÔM NAY</h2>
+                    </div>
+                    <a href="" class="video-item--link">
+                        <i class=" nav-arrow-down ti-angle-down video-item--icon"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Room option -->
+ <div class="room-main">
+    <div class="room-main--text">
+        <p>Room</p>
+        <h2>Tham gia chương trình Đăng Tiến Awards và bắt đầu ngay hôm nay</h2>
+    </div>
+    <div class="room-main-option-list">
+        <div class="room-main-option-item room-hover--icon-left">
+            <a href="" class="room-main--link">
+                <img class="img-room--option" src="//mauweb.monamedia.net/encore/wp-content/uploads/2019/02/013.jpg" alt="">
+                <div class="room-main-option-item--text">
+                    <p>Cặp đôi</p>
+                    <h2>DOUBLE SUITE ATTIC FLOOR</h2>
+                    <h3>1,500,000 đ</h3>
+                </div>
+            </a>
+            <a href="" class="room-icon--link-left">
+                <i class="nav-arrow-right ti-angle-left room-main-option--left"></i>
+            </a>
+        </div>
+        <div class="room-main-option-item">
+            <a href="" class="room-main--link">
+                <img class="img-room--option" src="//mauweb.monamedia.net/encore/wp-content/uploads/2019/02/02.jpg" alt="">
+                <div class="room-main-option-item--text">
+                    <p>GIA ĐÌNH</p>
+                    <h2>LUXURY DOUBLE ROOM SUITE</h2>
+                    <h3>850,000 đ</h3>
+                </div>
+            </a>
+        </div>
+        <div class="room-main-option-item room-hover--icon-right">
+            <a href="" class="room-main--link">
+                <img class="img-room--option" src="//mauweb.monamedia.net/encore/wp-content/uploads/2019/02/032.jpg" alt="">
+                <div class="room-main-option-item--text">
+                    <p>GIA ĐÌNH</p>
+                    <h2>FAMILY DOUBLE ROOM SUITE</h2>
+                    <h3>800,000 đ</h3>
+                </div>
+            </a>
+            <a href="" class="room-icon--link-right">
+                <i class="nav-arrow-right ti-angle-right room-main-option--right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="room-option--all">
+        <a href="" class="room-option--link">
+            Xem tất cả phòng
+            <i class="nav-arrow-right ti-angle-right room-option-icon"></i>
+        </a>
+
+    </div>
+</div>
+<div class="topic-main">
+    <a href="">
+        <i class="nav-arrow-left ti-angle-left topic-main-icon--left"></i>
+    </a>
+    <a href="">
+        <i class="nav-arrow-right ti-angle-right topic-main-icon--right"></i>
+    </a>
+    <div class="topic-introduce">
+        <div class="topic-introduce-text">
+            <h1>Spa & Massage</h1>
+            <p>1 buổi massage chỉ 250K</p>
+            <ul class="footer-style-list--none">
+                <li>Sự kiện đặc biệt & Dịch vụ ăn uống</li>
+                <li>Đặt phòng theo nhóm</li>
+                <li>Nhóm xã hội & đám cưới</li>
+                <li>Không gian hội nghị</li>
+            </ul>
+            <a class="topic-main--link" href="">Đặt ngay
+                <i class="nav-arrow-right ti-angle-right topic-main-link--icon"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="invite-main">
+    <h1>Kỳ nghỉ của bạn đang chờ</h1>
+    <p>Tham gia chương trình Dawng Tien Awards và bắt đầu ngay hôm nay</p>
+    <div class="invite-main--overlay">
+        <a class="invite-main--link" href="">Chọn một tour bất kì
+            <i class="nav-arrow-right ti-angle-right invite-main-link--icon"></i>
+        </a>
+    </div>
+</div>
+<div class="spa-overlay">
+    <div class="spa-main">
+        <div class="spa-main-text">
+            <h1>THƯ GIÃN VỚI SPA TRỌN GÓI</h1>
+            <h2>Bắt đầu chỉ từ 500K</h2>
+        </div>
+    </div>
+</div>
+</content>
+<footer>
+    <div class="footer-introduce grid">
+        <div class="footer-introduce-main footer-row">
+            <div class="footer-introduce-items l-3">
+                <p class="footer-text--private">Tham Gia Phần Thưởng</p>
+            </div>
+            <div class="footer-introduce-items l-3">
+                <div class="footer-introduce-items--overlay">
+                    <p>Cách Sử Dụng Điểm</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Khách sạn</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Cửa hàng bán lẻ</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Trao đổi điểm</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-introduce-items l-3">
+                <div class="footer-introduce-items--overlay">
+                    <p>Cách Kiếm Điểm</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Từ những đối tác</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Hãng hàng không</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Mua sắm</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-introduce-items l-3">
+                <div class="footer-introduce-items--overlay">
+                    <p>Khám Phá Lợi Ích</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Lợi ích thành viên</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Tin tức chương trình</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-items--link" >Các câu hỏi thường gặp</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Ưu đãi của hotel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-introduce-items l-3 footer-mt">
+                <p class="footer-text--private">Hỗ Trợ Khách Hàng</p>
+            </div>
+            <div class="footer-introduce-items l-3 footer-mt">
+                <div class="footer-introduce-items--overlay">
+                    <p>Điều Khoản Và Điều Kiện</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Thành viên vàng</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Thành viên bạc</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Câu lạc bộ thú cưng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-introduce-items l-3 footer-mt">
+                <div class="footer-introduce-items--overlay">
+                    <p>Tài Khoản Của Tôi</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Đặt phòng sắp tới</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Hoạt động tài khoản</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Hồ sơ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-introduce-items l-3 footer-mt">
+                <div class="footer-introduce-items--overlay">
+                    <p>Phần thưởng của hotel</p>
+                    <ul class="footer-style-list--none">
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Bắt đầu</a>
+                        </li>
+                        <li class="footer-list--link">
+                            <a href="" class="footer-items--link" >Diễn đàn du lịch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bye">
+        <div class="footer-bye--text">
+            <p>Đăng Tiến</p>
+            <h3>Cách bãi biển Minh Châu 15km hướng Đông</h3>
+            <h4>Đặt chỗ : 1900 666 888</h4>
+        <a href="https://www.facebook.com/profile.php?id=100038533609260" target="_blank" class="footer-bye--link"><i class="ti-facebook"></i></a>
+       <a href="https://www.instagram.com/dawngtien_1610/" target="_blank" class="footer-bye--link"><i class="ti-instagram"></i></a>
+       <a href="" class="footer-bye--link"><i class="ti-youtube"></i></a>
+       <a href="" class="footer-bye--link"><i class="ti-pinterest"></i></a>
+       <a href="" class="footer-bye--link"><i class="ti-twitter"></i></a>
+       <a href="" class="footer-bye--link"><i class="ti-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="footer-over">
+        <p>Good bye & See you again</p>
+    </div>
+</footer> 
+ 
+    
+    
+</body>
+</html>

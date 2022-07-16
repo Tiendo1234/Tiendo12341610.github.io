@@ -1,0 +1,40 @@
+:root {
+    --header__intro-height: 42px; 
+    --header__intro-main-height: 100px;
+    --primary-color: #2098d1;
+    --white-color: #fff;
+    --text-color: #000;
+    --topic-main-height: 510px;
+    --invite-main-height: 245px;
+}
+.no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.row-full-width {
+    width: 100%;
+}
+.img-full-width {
+    width: 100%;
+}
+.content_grid {
+    width: 100%;
+}
+.none {
+    display: none;
+}
+.img-to-fit {
+    width: 491.99px;
+    height: 337.75px;
+}
+.img-room--option {
+    width: 400px;
+    height: 245px;
+}
+.footer-row {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.footer-mt {
+    margin-top: 100px;
+}
